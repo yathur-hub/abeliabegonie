@@ -5,10 +5,11 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-    sourcemap: true,
+    sourcemap: false, // In Produktion oft deaktiviert für kleinere Files
     rollupOptions: {
       input: {
         main: './index.html',
